@@ -19,7 +19,7 @@ public class CpfService {
 
     public String encrypt(String Data) throws Exception {
         KeyGenerator keyGen = KeyGenerator.getInstance(ALGO);
-        keyGen.init(128);
+        keyGen.init(256);
         SecretKey secretKey = new SecretKeySpec(keyValue, ALGO);
 
         Cipher c = Cipher.getInstance(ALGO);
